@@ -18,7 +18,7 @@ GPIO.setup(green_led_pin, GPIO.OUT)
 while(num < 10):
     GPIO.output(green_led_pin, True)
     time.sleep(sleep_time)
-    GPIO.outpit(green_led_pin)
+    GPIO.output(green_led_pin, False)
     time.sleep(sleep_time)
     num += 1
 
