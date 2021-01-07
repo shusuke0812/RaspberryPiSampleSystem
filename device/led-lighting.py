@@ -14,6 +14,8 @@ sleep_time = 1
 # GPIOの設定
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(green_led_pin, GPIO.OUT)
+GPIO.setup(yellow_led_pin, GPIO.OUT)
+
 
 # 関数
 def led_lighting(gpio: int, sleep_time: int):
@@ -25,6 +27,7 @@ def led_lighting(gpio: int, sleep_time: int):
 # メイン処理
 while(num < 10):
     led_lighting(green_led_pin, sleep_time)
+    led_lighting(yellow_led_pin, sleep_time)
     num += 1
 
 GPIO.cleanup()
